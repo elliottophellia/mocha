@@ -2,3 +2,6 @@
 
 # Mocha
 Discord self-bot designed to bumping Disboard.org Every 2 Hours.
+
+# Note
+This is against discord ToS, so use at own risk
