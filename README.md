@@ -1,3 +1,5 @@
+# From Friday, April 1, 2022 6:00 AM regular commands will no longer work and the disboard will only respond to slash commands so this bot will be archived until i found a way to use slash command in selfbot.
+
 <img src="https://i.ibb.co/sCW8HGp/mocha-waifuwed-joi7.jpg" align="center" />
 
 # Mocha
