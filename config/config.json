@@ -1,5 +1,7 @@
 {
-    "token": "YOUR_TOKEN_NOT_A_BOT_TOKEN_HOW_TO_GET_IT_?_GOOGLE_IT",
-    "guild": "SERVER_DISCORD_ID",
-    "channel": "SERVER_DISCORD_CHANNEL_ID"
+    "token": "", 
+    "bump": {
+        "server": "",
+        "channel": ""
+    }
 }

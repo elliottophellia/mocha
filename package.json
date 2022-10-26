@@ -1,26 +1,29 @@
 {
   "name": "mocha",
-  "version": "1.0.0",
-  "description": "Discord self-bot designed to bumping Disboard.org every 2 hours.",
+  "version": "1.0.1",
+  "description": "Discord selfbot to bumping disboard.org",
   "main": "mocha.js",
   "scripts": {
-    "test": "node mocha.js"
+    "test": "node mocha.js",
+    "start": "node mocha.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eilaluth/Mocha.git"
+    "url": "git+https://github.com/Elliottophellia/mocha.git"
   },
   "keywords": [
+    "discord",
     "selfbot"
   ],
-  "author": "Eilaluth",
+  "author": "Elliottophellia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Eilaluth/Mocha/issues"
+    "url": "https://github.com/Elliottophellia/mocha/issues"
   },
-  "homepage": "https://github.com/Eilaluth/Mocha#readme",
+  "homepage": "https://github.com/Elliottophellia/mocha#readme",
   "dependencies": {
-    "cron": "^1.8.2",
-    "discord.js-selfbot": "^12.0.2"
+    "discord.js-selfbot-v13": "^2.8.7",
+    "figlet": "^1.5.2",
+    "node-cron": "^3.0.2"
   }
 }

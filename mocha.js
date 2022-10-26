@@ -1,19 +1,20 @@
-const {Client, MessageEmbed} = require('discord.js-selfbot');
-const cron = require('cron');
+const { Client } = require('discord.js-selfbot-v13');
+const client = new Client({ checkUpdate: false });
 const config = require('./config/config.json');
-const client = new Client({disableMentions: 'everyone'});
+const cron = require('node-cron');
+const figlet = require('figlet');
 
-
-client.once("ready", () => {
-    console.log(`Online as ${client.user.tag}`);
-
-    let scheduledMessage = new cron.CronJob('0 0-23/2 * * *', () => { // bumping every 2 hours, you can also use 0 */2 * * * if this one is error
-        const guild = client.guilds.cache.get(config.guild); // your guild id
-        const channel = guild.channels.cache.get(config.channel); // your guild channel id
-        channel.send(`!d bump`);
+client.on('ready', async () => {
+    console.log(figlet.textSync('Mocha', { horizontalLayout: 'full' }));
+    console.log(` Logged in as ${client.user.tag} at ${new Date().toLocaleString()}`);
+    console.log(` From now on, I will be bumping Disbord every 2 hours!`);
+    cron.schedule('0 */2 * * *', () => {
+        client.guilds.cache.get(config.bump.server).channels.cache.get(config.bump.channel).sendSlash('302050872383242240', 'bump');
+        console.log(' Bumping Disbord - ' + new Date().toLocaleString() + ' - ' + client.user.tag);
+    }, {
+        scheduled: true,
+        timezone: "Asia/Jakarta"
     });
-
-    scheduledMessage.start()
-});
+})
 
 client.login(config.token);
