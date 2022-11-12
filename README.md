@@ -52,7 +52,9 @@ npm install
 
 ```json
 {
-    "token": "your token", // https://linuxhint.com/get-discord-token/
+    // https://linuxhint.com/get-discord-token/
+    // Remember account token only works if your account still login in the browser (you can close it but dont logout or clear cache)
+    "token": "your token", 
     "bump": {
         "server": "server id",
         "channel;": "channel id"
