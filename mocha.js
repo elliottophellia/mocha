@@ -10,7 +10,7 @@ client.on('ready', async () => {
     console.log(` From now on, I will be bumping Disbord every 2 hours!`);
     
     //-----------------------------------------------------------------------------------------------------------------------
-    cron.schedule('0 */2 * * *', () => { // if somethings goes wrong you can try using this cron : 0 0-23/2 * *
+    cron.schedule('0 */2 * * *', () => { // if somethings goes wrong you can try using this cron : 0 0-23/2 * * *
         client.guilds.cache.get(config.bump.server).channels.cache.get(config.bump.channel).sendSlash('302050872383242240', 'bump');
         console.log(' Bumping Disbord - ' + new Date().toLocaleString() + ' - ' + client.user.tag);
     }, {
